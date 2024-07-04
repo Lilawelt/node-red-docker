@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  node-red:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: node-red-lilawelt:1.0
+    ports:
+      - "8080:1880"
+    volumes:
+      - /Users/nikki/node-red-data:/data
