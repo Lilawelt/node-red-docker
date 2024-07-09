@@ -10,7 +10,7 @@ RUN apt update && \
         unattended-upgrades
 
 RUN npm install -g --unsafe-perm node-red
-RUN useradd -m nodered -s /bin/bash
+RUN useradd -m nodered -s /bin/bash -u 1000
 
 COPY entrypoint.sh /home/nodered/
 RUN chmod 755 /home/nodered/entrypoint.sh
